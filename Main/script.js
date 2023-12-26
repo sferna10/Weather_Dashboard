@@ -1,5 +1,5 @@
 var searchHistory = [];
-var weatherApiRootUr1 = 'https://api.openweathermap.org';
+var weatherApiRootUrl = 'https://api.openweathermap.org';
 var weatherAPIKey= "0c2573248e3431bbff82e175a966bdc6";
 
 //Dom element references
@@ -60,7 +60,7 @@ function renderCurrentWeather(city, weather) {
 var tempF = weather.main.temp;
 var windMph = weather.wind.speed;
 var humidity = weather.main.humidity;
-var iconUr1 = `https://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
+var iconUrl = `https://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
 var iconDescription = weather.weather[0].description || weather[0].main;
 
 var card = document.createElement('div');
@@ -99,7 +99,7 @@ todayContainer.append(card);
 
 function renderForecastCard(forecast) {
 // variables for data from api
-var iconUr1 = `https:openweathermap.org/img/w/${forecast.weather[0].icon}.png`
+var iconUrl = `https:openweathermap.org/img/w/${forecast.weather[0].icon}.png`
 var iconDescription = forecast.weather[0].description;
 var tempE1 = forecast.main.temp;
 var humidity = forecast.main.humidity;
@@ -146,15 +146,15 @@ function renderForecast(dailyForecast) {
 var startDt = dayjs().add(1, 'day').startOf('day').unix();
 var endDt = dayjs().add(6, 'day').startOf('day').unix();
 
-var headingCo1 = document.createElement('div');
+var headingCol = document.createElement('div');
 var heading = document.createElement('h4');
 
-headingCo1.setAttribute('class', 'col-12');
+headingCol.setAttribute('class', 'col-12');
 heading.textContent = '5-Day Forecast:';
-headingCo1.append(heading);
+headingCol.append(heading);
 
 forecastContainer.innerHTML = '';
-forecastContainer.append(headingCo1);
+forecastContainer.append(headingCol);
 
 for (var i = 0; i < dailyForecast.length; i++) {
 
@@ -181,9 +181,9 @@ function fetchWeather(location) {
     var { lon } = location;
     var city = location.name;
 
-    var apiUr1 = `${weatherApiRootUr1}/data/2.5/forecast?lat=${lat}&long=${lon}&units=imperial&appid=${weatherAPIKey}`;
+    var apiUrl = `${weatherApiRootUrl}/data/2.5/forecast?lat=${lat}&long=${lon}&units=imperial&appid=${weatherAPIKey}`;
 
-    fetch(apiUr1)
+    fetch(apiUrl)
         .then(function (res) {
             return res.json();
         })
@@ -196,9 +196,9 @@ function fetchWeather(location) {
     }
 
 function fetchCoords(search) {
-    var apiUr1 =`${weatherApiRootUr1}/geo/1.0/direct?q=${search}&limit=5&appid=${weatherAPIKey}`;
+    var apiUrl =`${weatherApiRootUrl}/geo/1.0/direct?q=${search}&limit=5&appid=${weatherAPIKey}`;
 
-    fetch(apiUr1)
+    fetch(apiUrl)
         .then(function (res) {
             return res.json();
         })
