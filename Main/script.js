@@ -1,6 +1,6 @@
 var searchHistory = [];
 var weatherApiRootUr1 = 'https://api.openweathermap.org';
-var weatherAPIKey = "17fc5aec12f64758ad803eb5538adc56";
+var weatherAPIKey= "0c2573248e3431bbff82e175a966bdc6";
 
 //Dom element references
 var searchForm = document.querySelector('#search-form');
@@ -52,7 +52,7 @@ function initSearchHistory() {
     renderSearchHistory();
 }   
 
-//Function to display the current weather data fetcheed from OpenWeather api
+//Function to display the current weather data fetched from OpenWeather api
 function renderCurrentWeather(city, weather) {
     var date = dayjs().format('M/D/YYYY');
 
@@ -81,7 +81,7 @@ windE1.setAttribute('class', 'card-text');
 humidityE1.setAttribute('class', 'card-text');
 
 heading.textContent = `${city} (${date})`;
-weatherIcon.setAttribute('src', iconUrl);
+weatherIcon.setAttribute('src', iconUr1);
 weatherIcon.setAttribute('alt', iconDescription);
 weatherIcon.setAttribute('class', 'weather-img');
 heading.append(weatherIcon);
@@ -106,7 +106,7 @@ var humidity = forecast.main.humidity;
 var windMph = forecast.wind.speed;
 
 //Create elements for a card
-var co1 = document.createElement.apply('div');
+var col = document.createElement.apply('div');
 var card = document.createElement('div');
 var cardBody = document.createElement('div');
 var cardTitle = document.createElement('h5');
@@ -181,7 +181,7 @@ function fetchWeather(location) {
     var { lon } = location;
     var city = location.name;
 
-    var apiUr1 = `${weatherApiRootUr1}/data/2.5/forecast?lat=${lat}&long=${lon}&units=imperial&appid=${weatherApiKey}`;
+    var apiUr1 = `${weatherApiRootUr1}/data/2.5/forecast?lat=${lat}&long=${lon}&units=imperial&appid=${weatherAPIKey}`;
 
     fetch(apiUr1)
         .then(function (res) {
@@ -196,7 +196,7 @@ function fetchWeather(location) {
     }
 
 function fetchCoords(search) {
-    var apiUr1 =`${weatherApiRootUr1}/geo/1.0/direct?q=${search}&limit=5&appid=${weatherApiKey}`;
+    var apiUr1 =`${weatherApiRootUr1}/geo/1.0/direct?q=${search}&limit=5&appid=${weatherAPIKey}`;
 
     fetch(apiUr1)
         .then(function (res) {
@@ -221,7 +221,7 @@ function handleSearchFormSubmit(e) {
     return;
   }
 e.preventDefault();
-var search = serachInput.value.trim();
+var search = searchInput.value.trim();
 fetchCoords(search);
 searchInput.value = '';
 }
