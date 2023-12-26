@@ -1,2 +1,3 @@
 # Weather_Dashboard_forecast
-A weather application forecast for travelers 
+# Weather-Dashboard
+Application that allows weather outlook for multiple cities for travelers
