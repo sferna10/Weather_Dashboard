@@ -12,7 +12,7 @@ var searchHistoryContainer = document.querySelector('#history');
 //Add timezone plugins to day.js
 
 dayjs.extend(window.dayjs_plugin_utc);
-dayjs.extend(window.dayjs_pluging_timezone);
+dayjs.extend(window.dayjs_plugin_timezone);
 
 //Function to display the search history list
 
@@ -45,7 +45,7 @@ renderSearchHistory();
 }
 //Function to get search history from local storage
 function initSearchHistory() {
-    var storedHistory = localStorage.getItem('search-History');
+    var storedHistory = localStorage.getItem('search-history');
     if (storedHistory) {
         searchHistory = JSON.parse(storedHistory);
     }
@@ -81,7 +81,7 @@ windE1.setAttribute('class', 'card-text');
 humidityE1.setAttribute('class', 'card-text');
 
 heading.textContent = `${city} (${date})`;
-weatherIcon.setAttribute('src', iconUr1);
+weatherIcon.setAttribute('src', iconUrl);
 weatherIcon.setAttribute('alt', iconDescription);
 weatherIcon.setAttribute('class', 'weather-img');
 heading.append(weatherIcon);
@@ -99,14 +99,14 @@ todayContainer.append(card);
 
 function renderForecastCard(forecast) {
 // variables for data from api
-var iconUrl = `https:openweathermap.org/img/w/${forecast.weather[0].icon}.png`
+var iconUrl = `https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`
 var iconDescription = forecast.weather[0].description;
-var tempE1 = forecast.main.temp;
+var tempF = forecast.main.temp;
 var humidity = forecast.main.humidity;
 var windMph = forecast.wind.speed;
 
 //Create elements for a card
-var col = document.createElement.apply('div');
+var col = document.createElement('div');
 var card = document.createElement('div');
 var cardBody = document.createElement('div');
 var cardTitle = document.createElement('h5');
@@ -130,7 +130,7 @@ humidityE1.setAttribute('class', 'card-text');
 
 //Add content to elements
 cardTitle.textContent = dayjs(forecast.dt_txt).format('M/D/YYYY');
-weatherIcon.setAttribute('src', iconUr1);
+weatherIcon.setAttribute('src', iconUrl);
 weatherIcon.setAttribute('alt', iconDescription);
 tempE1.textContent = `Temp: ${tempF} °F`;
 windE1.textContent = `Wind: ${windMph} MPH`;
