@@ -1,4 +1,4 @@
-# Weather_Dashboard_forecast!
+# Weather_Dashboard_forecast
 
 
 ## Description
@@ -22,7 +22,12 @@ Any specific framework installation is required.
 
 ## Usage
 
-This application run in the browser. Once the users enter in the page, they can type in the search window, the name of the city is interested to know the climate conditions for the specific city. The aplication with retrieve the current weather conditions, the temperature, the humidity, and the wind speed and also it will display the five days forecast for the city. Also each day will show  an icon representation of the  weather conditions, the temperature, the wind speed and the humidity. 
+This application runs in the browser. Once the users enter the page, they can type the name of the city they are interested in knowing the climate conditions for the specific city in the search window. 
+
+<img width="1906" alt="Screenshot 2024-01-02 at 9 07 17 PM" src="https://github.com/sferna10/Weather_Dashboard_forecast/assets/139423719/c41913c0-55e8-48fb-b24a-4061ede54c8a">
+
+
+The application will retrieve the current weather conditions, the temperature, the humidity, and the wind speed, and it will also display the five-day forecast for the city. Also, each day will show an icon representation of the weather conditions, the temperature, the wind speed, and the humidity. 
 
 ## License 
     
@@ -30,7 +35,7 @@ This application run in the browser. Once the users enter in the page, they can 
 
 ## Contributing
 
-Fork the project, make some commits to improve the project, open a pull request
+Fork the project, make some commits to improve the project, and open a pull request.
 
 ## Tests
  
