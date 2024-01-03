@@ -29,6 +29,9 @@ This application runs in the browser. Once the users enter the page, they can ty
 
 The application will retrieve the current weather conditions, the temperature, the humidity, and the wind speed, and it will also display the five-day forecast for the city. Also, each day will show an icon representation of the weather conditions, the temperature, the wind speed, and the humidity. 
 
+<img width="1916" alt="Screenshot 2024-01-02 at 9 06 57 PM" src="https://github.com/sferna10/Weather_Dashboard_forecast/assets/139423719/410765b5-3047-4fd9-bbad-9abd69090c15">
+
+
 ## License 
     
        No license.
