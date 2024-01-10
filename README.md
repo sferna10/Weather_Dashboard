@@ -31,6 +31,7 @@ The application will retrieve the current weather conditions, the temperature, t
 
 <img width="1916" alt="Screenshot 2024-01-02 at 9 06 57 PM" src="https://github.com/sferna10/Weather_Dashboard_forecast/assets/139423719/410765b5-3047-4fd9-bbad-9abd69090c15">
 
+The application can be accessed [here](https://colcob98.github.io/LingoChat/).
 
 ## License 
     
