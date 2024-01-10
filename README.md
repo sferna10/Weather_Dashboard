@@ -31,7 +31,7 @@ The application will retrieve the current weather conditions, the temperature, t
 
 <img width="1916" alt="Screenshot 2024-01-02 at 9 06 57 PM" src="https://github.com/sferna10/Weather_Dashboard_forecast/assets/139423719/410765b5-3047-4fd9-bbad-9abd69090c15">
 
-The application can be accessed [here](https://colcob98.github.io/LingoChat/).
+The application can be accessed [here]( https://sferna10.github.io/Weather_Dashboard_forecast/).
 
 ## License 
     
@@ -39,7 +39,7 @@ The application can be accessed [here](https://colcob98.github.io/LingoChat/).
 
 ## Contributing
 
-Fork the project, make some commits to improve the project, and open a pull request.
+Fork the project, make some commitments to improve it, and open a pull request.
 
 ## Tests
  
